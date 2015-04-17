@@ -1,0 +1,53 @@
+$def with (data,total)
+<html>
+<head>
+
+	
+</head>
+
+    <body>
+    <h1><p style="text-align:center;">PURCHASES</p></h1>
+    <hr width="100%" size="1">
+    
+        <div>	
+		<div style="margin:2px 2px; padding:20px; text-align:center;">
+			<form style="border:2px;" method="POST" enctype="multipart/form-data">		
+				<div>
+					<p>
+						<input type="file"  id="myfile" name="myfile" style="width:35%"/>
+						
+						<input type="submit"/>
+					</p>
+				</div>
+			</form>
+		</div>
+	</div>
+	<hr width="100%" size="1" >
+	<div style="margin:0px 0px; padding:20px; text-align:center;">
+	Last Purchases total: $total
+	</div>
+	<hr width="100%" size="1" >
+	
+	<div style="margin:0px 0px; padding:20px; text-align:center;">
+	<table  BORDER RULES=rows style="width:1000px;margin:0px auto;text-align:left;padding:15px; background-color:#eee;">
+		<tr>
+			<td>Purchaser Name</td>
+			<td>Item Description</td>
+			<td>Item Price</td>
+			<td>Purchase Count</td>
+			<td>Merchant Address</td>
+			<td>Merchant Name</td>
+		</tr>
+		$for item in data:
+			<tr>
+				<td>$item[1]</td>
+				<td>$item[2]</td>
+				<td>$item[3]</td>
+				<td>$item[4]</td>				
+				<td>$item[5]</td>
+				<td>$item[6]</td>	
+			</tr>		
+	</table>
+	</div>
+    </body>
+</html>
